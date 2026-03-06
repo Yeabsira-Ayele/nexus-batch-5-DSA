@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    
+    arr = sorted(arr)
+    largest = arr[-1]
+    second = arr[0]
+    for x in range(len(arr) - 1 , -1 , -1):
+        if arr[x] < largest and arr[x] > second:
+            second = arr[x]
+    print(second)
+    
+    
+    # if len(arr) == 1:
+    #     return None
+    # for x in arr :
+    #     if x > largest:
+    #         second_l = largest
+    #         largest = x
+    # print(second_l) 
