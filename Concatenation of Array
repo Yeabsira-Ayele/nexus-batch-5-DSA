@@ -1,0 +1,6 @@
+class Solution(object):
+    def getConcatenation(self, nums):
+        arr = nums
+        arr.extend(nums)
+        return arr
+        
