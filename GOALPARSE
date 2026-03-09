@@ -1,0 +1,18 @@
+class Solution(object):
+    def interpret(self, command):
+        """
+        :type command: str
+        :rtype: str
+        """
+        str_ = ""
+        n = len(command)
+        for i in range(n):
+            if command[i] == "G":
+                str_ += "G"
+            elif command[i] == "(" and command[i+1] == ")":
+                str_ += "o"
+            elif  command[i] == "(" and command[i+1] == "a" and command[i + 2] == "l" and command[i+ 3] == ")":      
+            
+                str_ += "al"
+        return str_
+        
