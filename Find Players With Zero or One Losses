@@ -1,0 +1,30 @@
+class Solution(object):
+    def findWinners(self, matches):
+        dict1_ = {}
+        dict2_ = {}
+        lst1 = []
+        lst2 = []
+        n = len(matches)
+        for i in range(n):
+            if matches[i][0] in dict1_:
+                dict1_[matches[i][0]] += 1
+            elif matches[i][0] not in dict1_ :
+                dict1_[matches[i][0]] = 1
+
+            if matches[i][1] in dict2_:
+                dict2_[matches[i][1]] += 1
+            elif matches[i][1] not in dict2_:
+                dict2_[matches[i][1]] = 1
+        print(dict1_)
+        print(dict2_)
+        for key in dict1_:
+            if key not in dict2_:
+                lst1.append(key)
+        for key in dict2_:
+            if dict2_[key] == 1:
+                lst2.append(key)
+       
+       
+    
+        
+        return sorted(lst1), sorted(lst2)
