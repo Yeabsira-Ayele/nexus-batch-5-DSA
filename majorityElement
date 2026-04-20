@@ -1,0 +1,10 @@
+from collections import Counter
+import math  
+class Solution(object):
+    def majorityElement(self, nums):
+        n = Counter(nums)
+        m = math.ceil(len(nums)/2.0)
+        
+        for i in n:
+            if n[i] >= m:
+                return i
