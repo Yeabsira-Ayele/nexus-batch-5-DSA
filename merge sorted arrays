@@ -1,0 +1,20 @@
+class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        x = n - 1
+        y = m + n - 1
+        z = m - 1
+
+        while x >= 0 and z >= 0:
+            if nums1[z] > nums2[x]:
+                nums1[y] = nums1[z]
+                z -= 1
+            else:
+                nums1[y] = nums2[x]
+                x -= 1
+            y -= 1
+
+        while x >= 0:
+            nums1[y] = nums2[x]
+            x -= 1
+            y -= 1
+        return nums1
