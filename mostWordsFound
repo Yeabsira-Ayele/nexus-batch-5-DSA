@@ -1,0 +1,6 @@
+class Solution(object):
+    def mostWordsFound(self, sentences):
+        max_ = 0
+        for elmnt in sentences:
+            max_ = max(max_ , len(elmnt.split(" ")))
+        return max_
