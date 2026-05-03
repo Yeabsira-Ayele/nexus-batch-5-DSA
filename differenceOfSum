@@ -1,0 +1,20 @@
+class Solution(object):
+    def differenceOfSum(self, nums):
+        elemnt_sum = 0
+        digit_sum = 0
+
+        for num in nums:
+            elemnt_sum += num
+            if num >= 10 :
+                while num > 0:
+                    digit = num % 10
+                    num = num // 10
+                    digit_sum += digit
+            else:
+                digit_sum += num
+        res = abs(elemnt_sum - digit_sum)
+        return res
+
+
+
+        
