@@ -1,0 +1,11 @@
+class Solution(object):
+    def canAliceWin(self, nums):
+        s_d = 0
+        d_d = 0
+        for num in nums:
+            if num > 9:
+                d_d += num
+            else:
+                s_d += num
+        return (d_d != s_d)
+
