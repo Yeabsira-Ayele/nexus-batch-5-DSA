@@ -1,0 +1,12 @@
+class Solution(object):
+    def subtractProductAndSum(self, n):
+        product = 1
+        sum_ = 0
+
+        while n > 0:
+            digit = n % 10
+            n = n// 10
+            product *= digit
+            sum_ += digit
+        return (product - sum_)
+        
