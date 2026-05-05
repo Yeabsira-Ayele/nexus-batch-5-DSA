@@ -1,0 +1,13 @@
+class Solution(object):
+    def maximumWealth(self, accounts):
+        rich = 0
+        for num in accounts:
+            sum_ = 0
+            for n in num:
+                sum_ += n
+                rich = max(sum_ , rich)
+              
+        return rich
+                 
+
+        
