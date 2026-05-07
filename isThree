@@ -1,0 +1,23 @@
+class Solution:
+    def isThree(self, n: int) -> bool:
+        
+        def is_prime(x):
+            if x < 2:
+                return False
+
+            i = 2
+            while i * i <= x:
+                if x % i == 0:
+                    return False
+                i += 1
+
+            return True
+
+        root = int(n ** 0.5)
+
+        # n must be a perfect square
+        if root * root != n:
+            return False
+
+        # sqrt(n) must be prime
+        return is_prime(root)
